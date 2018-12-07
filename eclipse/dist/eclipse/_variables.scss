@@ -1,0 +1,35 @@
+$primary: #0454b6;
+$secondary: #959fa4;
+$success: #04b041;
+$info:  #08bcff;
+$warning: #ff7e00;
+$danger: #ea2222;
+$link: #ffffff;
+$dark: #222222;
+
+$main-color: lighten(#222, 5%);
+$font-color: #ffffff;
+
+$link-color: darken($font-color, 30%);
+
+$dominant-grey: #3b3b3b;
+
+$border-color: #535353;
+
+$border-width: 1px;
+
+$card-border-color: $border-color;
+$card-border-width: $border-width; 
+
+$dropdown-border-width: $border-width;  
+$dropdown-border-color: $border-color;
+$dropdown-bg: $border-color;
+
+$modal-header-border-color: $border-color;
+$modal-footer-border-color: $border-color;
+
+$close-color: $font-color;
+
+$table-border-color: $border-color;
+$table-dark-border-color: $table-border-color;
+$table-dark-color: $font-color;

@@ -1,0 +1,257 @@
+@mixin main-colors {
+	background-color: $main-color;
+	color: $font-color;
+}
+
+@mixin submain-colors {
+	background-color: $dominant-grey;
+	color: $font-color;
+}
+
+@mixin item-hover {
+	color: $main-color;
+	background-color:lighten(#999, 30%);
+}
+
+body {
+	@include main-colors();
+}
+
+.modal-content {
+	border-radius: .25rem;
+	border-color: $border-color;
+	@include submain-colors;
+}
+
+.popover {
+	border-radius: .40rem;
+	border: unset;
+	 &-header {
+		border-top-left-radius: .25rem;
+		border-top-right-radius: .25rem;
+		background-color: $main-color;
+		border: 1px solid $border-color;
+	 }
+	 &-body {
+		border-bottom-left-radius: .25rem;
+		border-bottom-right-radius: .25rem;
+		border: 1px solid $border-color;
+		@include submain-colors;
+	}
+}
+
+.bs-popover {
+	&-right .arrow:after {
+		border-right-color: $border-color;
+	}
+	&-left .arrow:after {
+		border-left-color: $border-color;
+	}
+	&-top .arrow:after {
+		border-top-color: $border-color;
+	}
+	&-bottom .arrow:after {
+		border-bottom-color: $border-color;
+	}
+	&-bottom .popover-header:before {
+		border-bottom: 1px solid $border-color;
+	}
+} 
+
+label, legend, h1, h2, h3, h4, h5, h6, table, p,
+.form-control-plaintext,
+.form-control-file,
+.card-header, ul,
+.close 
+{
+	color: $font-color;
+}
+
+.close:not(:disabled):not(.disabled):hover {
+	color: unset;
+}
+
+a {
+	color: darken($font-color, 15%);	
+}
+
+p {
+	line-height: 1.7;
+	word-spacing: .05em; 
+}
+
+.jumbotron *,
+.increment, 
+.increment-lg,
+.alert  *,
+.card.bg-light  *
+{
+	color: $main-color;
+}
+
+.page {
+	&-item a, 
+	&-item.disabled &-link {
+		@include main-colors;
+		border: 1px solid $border-color; 
+	}
+	
+	&-item a:hover {
+		background-color: $dominant-grey;
+		//color: $font-color;//$primary;
+	}
+}
+
+.dropdown-menu .card-header,
+.card-header .btn-group {
+	background-color: $main-color;
+}
+
+.card, 
+.table .table,
+.card-footer
+{
+	background-color: $dominant-grey;
+}
+
+.btn-link
+.card .card-header
+.form-control-plaintext
+ {
+	color: $font-color;
+}
+
+.table {
+	&-primary,
+	&-secondary,
+	&-success,
+	&-danger,
+	&-warning,
+	&-info,
+	&-light,
+	&-dark
+	{
+		color: $main-color;
+	}
+
+}
+
+.component-header {
+	color: $font-color;
+}
+
+.breadcrumb {
+    background-color: #565656;
+	&-item {
+		font-weight: normal;
+	}
+	&-item a {
+		color: $font-color;
+	} 
+}
+
+.btn, .badge {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.form-group, .form-control {
+	padding-top: 1px;
+}
+
+.btn-group-vertical {
+	margin: 2px;
+}
+
+.input-group .btn,
+.btn-group-vertical .btn {
+	margin: 0px;
+}
+
+.input-group > .form-control:not(:first-child) {
+    border-top-left-radius: 0 ;
+    border-bottom-left-radius: 0;
+}
+
+.badge {
+    &-secondary, &-warning {
+	  color: $font-color;
+	}
+}
+
+.btn {
+	&-secondary, &-warning,
+	&#{&}-secondary.disabled,
+	&#{&}-warning.disabled,
+	&-warning:disabled  {
+		color: $font-color;
+	} 
+}
+
+.nav {
+	&#{&}-pills.flex-column &-item {
+		background-color: $main-color;
+	}
+	&#{&}-pills li > a:hover,
+	{
+		color: $main-color;
+	}
+	&-pills li:not(.active) > a:hover {
+		background-color: lighten($primary, 50%); 
+		border-radius: .25rem;
+	}	
+	&-pills .active-parent:hover {
+		background-color: initial;
+		border-radius: .25rem;
+	}
+	&-item &-link:hover *,
+	&-tabs &-item:hover &-link,
+	&-tabs &-item:hover {
+		color: $main-color;
+	}
+	&-item &-link
+	{
+		color: $font-color;
+	}
+	&-tabs &-item:hover {
+		background-color: $font-color;
+	}
+	&-templated .dropdown-menu {
+		background-color: $dominant-grey;
+	}
+	&-tabs &-item:hover {
+		border-top-left-radius: .25rem;
+		border-top-right-radius: .25rem;
+	}	
+}
+
+.dropdown-menu .dropdown-item:hover {
+	@include item-hover;
+}
+.list-group-item {
+	&:hover,
+	&:hover &-heading,
+	&:hover &-text,
+	&:hover > label.form-check-label {
+		@include item-hover;
+	}
+	& {
+		background-color:$dominant-grey;
+	}
+	&-action {
+		color: $font-color;
+	}
+}
+
+.dropdown-item {
+	color: $font-color;
+}
+
+.table-bordered {
+	& td,
+	{
+		border: 1px solid $border-color; 
+	}
+}
