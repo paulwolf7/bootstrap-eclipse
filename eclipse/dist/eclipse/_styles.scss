@@ -83,8 +83,7 @@ p {
 .jumbotron *,
 .increment, 
 .increment-lg,
-.alert  *,
-.card.bg-light  *
+.alert  *
 {
 	color: $main-color;
 }
@@ -98,7 +97,6 @@ p {
 	
 	&-item a:hover {
 		background-color: $dominant-grey;
-		//color: $font-color;//$primary;
 	}
 }
 
@@ -194,7 +192,7 @@ p {
 	&#{&}-pills.flex-column &-item {
 		background-color: $main-color;
 	}
-	&#{&}-pills li > a:hover,
+	&#{&}-pills li > a:hover
 	{
 		color: $main-color;
 	}
@@ -250,7 +248,7 @@ p {
 }
 
 .table-bordered {
-	& td,
+	& td
 	{
 		border: 1px solid $border-color; 
 	}
